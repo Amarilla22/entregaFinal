@@ -14,7 +14,10 @@
   "description": "",
   "dependencies": {
     "express": "^5.1.0",
+    "express-handlebars": "^8.0.1",
+    "install": "^0.13.0",
     "mongoose": "^8.16.4",
-    "mongoose-paginate-v2": "^1.9.1"
+    "mongoose-paginate-v2": "^1.9.1",
+    "npm": "^11.5.2"
   }
 }

@@ -1,0 +1,9 @@
+<h1>Tu carrito</h1>
+
+<ul>
+  {{#each productos}}
+    <li>
+      <strong>{{product.title}}</strong> - ${{product.price}} x {{quantity}} unidades
+    </li>
+  {{/each}}
+</ul>

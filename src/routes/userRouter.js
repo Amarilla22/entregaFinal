@@ -51,6 +51,16 @@ router.get('/', async (req, res) => {
 
 
 //Carrito
+router.get('/createCart', async (req, res) => {
+  try {
+    const nuevoCarrito = await Cart.create({ productos: [] });
+
+    // Redirige a la vista de productos con el carritoId en la query
+    res.redirect(`/products?carritoId=${nuevoCarrito._id}`);
+  } catch (err) {
+    res.status(500).json({ status: 'error', message: err.message });
+  }
+});
 
 //Borro un producto
 router.delete('/carts/:cid/products/:pid', async (req, res) => {

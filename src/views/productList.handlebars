@@ -1,5 +1,14 @@
 <h1>Productos</h1>
 
+<a href="/carts/{{carritoId}}">🛒 Ver carrito</a>
+
+<form action="/api/carts/{{carritoId}}/products/{{_id}}" method="POST">
+  <input type="hidden" name="quantity" value="1" />
+  <button type="submit">Agregar al carrito</button>
+</form>
+
+
+
 <div>
   {{#each products}}
     <div class="producto">
